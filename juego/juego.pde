@@ -5,6 +5,7 @@ float speed = 2.5;
 float speed2 = 2.5;
 int direction = 1;
 PImage img;
+float x2=x;
 void setup() {
 size(1300, 680);
 ellipseMode(RADIUS);
@@ -12,14 +13,13 @@ img = loadImage("ball.jpg");
 
 }
 void draw() {
- image(img, x, 0);
+ image(img, x2, 0);
   text(mouseX,200,200);
   text(mouseY,400,200);
 //background(0);
 imageMode(CORNER);
-image(img,x,0);
-image(img, x+img.width,0);
-x-=1;
+//image(img,x,0);
+
 arc(x, y, radius, radius, 0, 360);
        fill(255,65,67);
 
@@ -30,6 +30,7 @@ if (keyCode == LEFT) { // If it's the right arrow
 x-= speed2;
 
  // Face left
+ /*
 if (x > width-radius)  {
 
 speed=0;
@@ -37,13 +38,14 @@ speed=0;
 else if  ( radius > x){
  direction = -direction;
   speed2=0;
-}
+}*/
 }
  if (keyCode == RIGHT) { // If it's the right arrow
-
+image(img, x2+img.width,0);
+ x2-=speed;
 x+= speed;
 
-if (x > width-radius)  {
+/*if (x > width-radius)  {
 
 speed=0;
 }
@@ -54,7 +56,7 @@ else if  ( radius > x){
 else {
 speed = 2.5;
 speed2 = 2.5;
-}
+}*/
 
  
 }
