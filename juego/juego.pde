@@ -1,92 +1,98 @@
 int radius = 40;
+int gamestate=1;
 float x = 50;
 float y= 490;
-float speed = 3;
-float speed2 = 3;
-float speed3=3;
+float speedbolitaDA = 3;
+float speed2bolitaIA = 3;
+float speed3fondo=3;
 int direction = 1;
-PImage img;
-float x2=0;
+PImage img,img2;
+float posicionfondo=0;
+//PImage [] balls = new PImage[9];
 void setup() {
   size(1300, 680);
   ellipseMode(RADIUS);
-  img = loadImage("ball.jpg");
+ img = loadImage("ball.jpg");
+  //img2=loadImage("maxresdefault.jpg");
+  //for (int i =1; i< balls.length; i++){
+ //  balls[i] = loadImage("Captura de pantalla"+i+".jpg"); 
+  //}
 }
 void draw() {
-  image(img, x2, 0);
+  image(img, posicionfondo, 0);
   text(mouseX, 200, 200);
   text(mouseY, 400, 200);
   //background(0);
   imageMode(CORNER);
-  //image(img,x,0);
-
+  
+//image(balls[1],x,y,radius,radius);
 
 
   if (keyPressed && (key == CODED)) {// If it's a coded key}.
 
     if (keyCode == LEFT) { // If it's the right arrow
-      x2 += speed3; //izquierda
-      x -= speed2;  //derecha
+      posicionfondo += speed3fondo; //izquierda
+     x -= speed2bolitaIA;  //derecha
 
       // Face left
 
        if  ( radius > x) {
         direction = -direction;
-        speed2=0;
+        speed2bolitaIA=0;
       } else  {
-        speed = 3;
-        speed2 = 3;
+        speedbolitaDA = 3;
+        speed2bolitaIA = 3;
       }
     }
     if (keyCode == RIGHT) { // If it's the right arrow
-      x2-=speed3;
-      x+= speed;
+      posicionfondo-=speed3fondo;
+      x+= speedbolitaDA;
 
       if (x > width-radius)  {
        
-       speed=0;
-       speed2 = 3;
+       speedbolitaDA=0;
+      speed2bolitaIA = 3;
        }
        else if  ( radius > x){
        direction = -direction;
-       speed2=0;
+       speed2bolitaIA=0;
        }
        else {
-       speed = 3;
-       speed2 = 3;
+       speedbolitaDA = 3;
+       speed2bolitaIA = 3;
        }
     }
 
     if (keyCode == UP) {
-      y-=speed;
+      y-=speedbolitaDA;
 
       if (y > height-radius) {
 
-        speed=0;
+        speedbolitaDA=0;
       } else if  ( radius > y) {
         direction = -direction;
-        speed=0;
+        speedbolitaDA=0;
       }
     } else if (keyCode == DOWN) {
-      y+=speed2;
+      y+=speed2bolitaIA;
 
 
       if (y > 528-radius) {
 
-        speed2=0;
+       speed2bolitaIA=0;
       } else if  ( radius > y) {
         direction = -direction;
-        speed2=0;
+        speed2bolitaIA=0;
       } else {
-        speed = 3;
-        speed2 = 3;
+        speedbolitaDA = 3;
+        speed2bolitaIA = 3;
       }
     }
-    if(abs(x2) > img.width) x2 = 0;
-    image(img, x2+img.width, 0);
-    image(img, x2-img.width, 0);
-    //keyPressed = false;
+   if(abs(posicionfondo) > img.width) posicionfondo = 0;
+    image(img, posicionfondo+img.width, 0);
+    image(img, posicionfondo-img.width, 0);
+    ///keyPressed = false;
   }
-  arc(x, y, radius, radius, 0, 360);
+ arc(x, y, radius, radius, 0, 360);
   fill(255, 65, 67);
 }
