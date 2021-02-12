@@ -1,3 +1,14 @@
+//salto de la bolita 
+PImage carabolitaRun1;
+PImage carabolitaJump;
+
+int groundHeight = 150;
+int figuraXpos = 100;
+
+figura carabolita;
+
+
+float posY = 0;
 int radius = 40;
 int gamestate=1;
 float x = 50;
@@ -14,11 +25,18 @@ int posYI=0;
 
 void setup() {
   size(1300, 680);
+  frameRate(60);
   ellipseMode(RADIUS);
  img = loadImage("ball.jpg");
   img2=loadImage("maxresdefault.jpg");
+
+//salto de la bolita 
+ carabolitaRun1 = loadImage("Captura de pantalla0.png");
+ carabolitaJump = loadImage("Captura de pantalla0.png");
+ carabolita = new figura();
   
 }
+
 void draw() {
   if (gamestate == 1){
       image(img2, posxI, posYI);
@@ -56,7 +74,6 @@ if (gamestate==0){
     if (keyCode == RIGHT) { // If it's the right arrow
       posicionfondo-=speed3fondo;
       x+= speedbolitaDA;
-
       if (x > width-radius)  {
        
        speedbolitaDA=0;
@@ -102,8 +119,17 @@ if (gamestate==0){
     image(img, posicionfondo+img.width, 0);
     image(img, posicionfondo-img.width, 0);
     ///keyPressed = false;
-    arc(x, y, radius, radius, 0, 360);
-  fill(255, 65, 67);
+   // arc(x, y, radius, radius, 0, 360);
+  //fill(255, 65, 67);
+  carabolita.show();
+ carabolita.mover();
   }
- 
+
+}
+
+void keyPressed(){
+ switch(key){
+  case' ':carabolita.jump(); 
+         break;
+ }
 }
