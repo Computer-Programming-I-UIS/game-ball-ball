@@ -8,17 +8,26 @@ float speed3fondo=3;
 int direction = 1;
 PImage img,img2;
 float posicionfondo=0;
+int posxI=0;
+int posYI=0;
 //PImage [] balls = new PImage[9];
+
 void setup() {
   size(1300, 680);
   ellipseMode(RADIUS);
  img = loadImage("ball.jpg");
-  //img2=loadImage("maxresdefault.jpg");
-  //for (int i =1; i< balls.length; i++){
- //  balls[i] = loadImage("Captura de pantalla"+i+".jpg"); 
-  //}
+  img2=loadImage("maxresdefault.jpg");
+  
 }
 void draw() {
+  if (gamestate == 1){
+      image(img2, posxI, posYI);
+  }
+  if (mousePressed == true)
+{
+ gamestate =0;
+}
+if (gamestate==0){
   image(img, posicionfondo, 0);
   text(mouseX, 200, 200);
   text(mouseY, 400, 200);
@@ -88,11 +97,13 @@ void draw() {
         speed2bolitaIA = 3;
       }
     }
+ }// gamestate
    if(abs(posicionfondo) > img.width) posicionfondo = 0;
     image(img, posicionfondo+img.width, 0);
     image(img, posicionfondo-img.width, 0);
     ///keyPressed = false;
-  }
- arc(x, y, radius, radius, 0, 360);
+    arc(x, y, radius, radius, 0, 360);
   fill(255, 65, 67);
+  }
+ 
 }
