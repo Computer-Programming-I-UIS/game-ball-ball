@@ -4,6 +4,7 @@ float posY = 0;
 float vely = 0;
 float gravedad = 1.2;
 int size = 20 ;
+boolean salto = false;
 
 int runCount =-5;
 int lifespan;
@@ -17,8 +18,9 @@ void jump(){
    vely= 16;
   }
 }
+
 void show(){
-    if(posY == 0){
+    if(salto && posY == 0){
       if(runCount < 0){
       image(carabolitaRun1, figuraXpos - carabolitaRun1.width / 1, height - groundHeight - (posY + carabolitaRun1.height));
     }
@@ -28,7 +30,6 @@ void show(){
     }
   }
 
-    
 
 
 void mover(){
