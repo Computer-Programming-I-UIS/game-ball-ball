@@ -22,11 +22,11 @@ void jump(){
 void show(){
     if(salto && posY == 0){
       if(runCount < 0){
-      image(carabolitaRun1, figuraXpos - carabolitaRun1.width / 1, height - groundHeight - (posY + carabolitaRun1.height));
+      image(carabolitaRun1, figuraXpos/* - carabolitaRun1.width*/ , height - groundHeight - (posY + carabolitaRun1.height));
     }
     }
     else{
-      image(carabolitaJump, figuraXpos - carabolitaJump.width / 1, height - groundHeight - (posY + carabolitaJump.height));
+      image(carabolitaJump, figuraXpos /*- carabolitaJump.width*/ , height - groundHeight - (posY + carabolitaJump.height));
     }
   }
 
