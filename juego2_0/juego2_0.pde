@@ -28,7 +28,7 @@ float speedbolitaDA = 3;
 float speed2bolitaIA = 3;
 float speed3fondo=4;
 int direction = 1;
-PImage img, img2;//imagenes inicio y nivles
+PImage img, img2,imgh,imgr,imgN5;//imagenes inicio y nivles
 float posicionfondo=0;
 //posicion de las imagenes
 int posxI=0;
@@ -49,6 +49,9 @@ void setup() {
   imgN4=loadImage("nivel2.jpg");
   img = loadImage("fondo1.jpg");
   img2=loadImage("ball.png");
+  imgh=loadImage("Home.png");
+  imgr=loadImage("Reset.png");
+  imgN5=loadImage("fondo5.jpg");
    //imageMode(CENTER);
   //salto de la bolita y animacion 
    carabolitaRun1 = loadImage("Captura de pantalla0.png");
