@@ -18,17 +18,21 @@ class niveles {
     frameRate(30);
     //
     if (gamestate == 1) {
+      
       image(img2, posxI, posYI);
-      if (mousePressed == true)
-      {
+      text(mouseX, 100, 100);
+      text(mouseY, 300, 100);
+      fill(0);
+       if (mouseX>540 && mouseX < 670 && mouseY<280   && mouseY>150) {
+        if (mousePressed == true)
+        {
         gamestate =2;
       }
     }
 
     if (gamestate==2) {
       image(imgN3, 0, 0);
-      text(mouseX, 100, 100);
-      text(mouseY, 300, 100);
+      
       if (mouseX>376 && mouseX < 480 && mouseY<320   && mouseY>230) {
         if (mousePressed == true)
         {
@@ -55,9 +59,8 @@ class niveles {
 
     else   if (gamestate==3) {
       image(imgN4, posicionfondo, 0);
-      ellipse(1200, 40, 20, 20);
-
-      fill(0);
+     // image(imgN4, posicionfondo, 0);
+      
 
       if (mouseX>1180 && mouseX<1220  && mouseY>20  && mouseY<60) {
         if (mousePressed == true)
@@ -275,4 +278,4 @@ class niveles {
       fill(0);
     }
   }
-}
+}}

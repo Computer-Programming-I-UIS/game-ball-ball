@@ -44,7 +44,7 @@ void setup() {
   //Niveles imagenes cargadas 
   ellipseMode(RADIUS);
   imgN = loadImage("fondo4.jpg");//fondo nivel 1 
-  imgN2=loadImage("maxresdefault.png");//fondo inicio
+//  imgN2=loadImage("maxresdefault.png");//fondo inicio
   imgN3=loadImage("niveles.jpg");//fondo niveles
   imgN4=loadImage("nivel2.jpg");
   img = loadImage("fondo1.jpg");
