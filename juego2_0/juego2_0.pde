@@ -44,11 +44,11 @@ void setup() {
   //Niveles imagenes cargadas 
   ellipseMode(RADIUS);
   imgN = loadImage("fondo4.jpg");//fondo nivel 1 
-  imgN2=loadImage("maxresdefault.jpg");//fondo inicio
+  imgN2=loadImage("maxresdefault.png");//fondo inicio
   imgN3=loadImage("niveles.jpg");//fondo niveles
   imgN4=loadImage("nivel2.jpg");
   img = loadImage("fondo1.jpg");
-  img2=loadImage("maxresdefault.jpg");
+  img2=loadImage("ball.png");
    //imageMode(CENTER);
   //salto de la bolita y animacion 
    carabolitaRun1 = loadImage("Captura de pantalla0.png");
