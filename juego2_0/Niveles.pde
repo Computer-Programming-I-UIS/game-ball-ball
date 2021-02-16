@@ -29,6 +29,13 @@ class niveles {
           gamestate =2;
         }
       }
+      //
+      if (mouseX>540 && mouseX < 670 && mouseY<610   && mouseY>470) {
+        if (mousePressed == true)
+        {
+          exit();
+        }
+      }
     }
     if (gamestate==2) {
       image(imgN3, 0, 0);
