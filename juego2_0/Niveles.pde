@@ -69,65 +69,69 @@ class niveles {
 
         if (keyCode == LEFT) { // If it's the right arrow
           posicionfondo += speed3fondo; //izquierda
-          x -= speed;
-          x+=speed;//derecha
-        //  movimientobola+= speed;
+          // x -= speed;
+          //x+=speed;//derecha
+          //  movimientobola+= speed;
           // Face left
-
-          if  (  movimientobola<0) {
-          //  direction = -direction;
+          println(movimientobola);
+          if  (  movimientobola<3) {
+            //  direction = -direction;
             //speed2bolitaIA=0;
             speed=0;
           } else {
             ///speedbolitaDA = 3;
             //speed2bolitaIA = 3;
-             speed=7;
-             movimientobola-= speed;
+            speed=5;
+            // movimientobola-= 12;
           }
         }
+        //  movimientobola= 50;
         if (keyCode == RIGHT) { // If it's the right arrow
           posicionfondo-=speed3fondo;
-          x+= speedbolitaDA;
+          //speed=7;
+          println(movimientobola);
+          // x+= speedbolitaDA;
 
-          if (x > width-radius) {
-
-            speedbolitaDA=0;
-            speed2bolitaIA = 3;
-          } else if  ( radius > x) {
-            direction = -direction;
-            speed2bolitaIA=0;
-          } else {
-            speedbolitaDA = 3;
-            speed2bolitaIA = 3;
+          if (movimientobola> 1196) {
+            speed=0;
+            // speedbolitaDA=0;
+            //speed2bolitaIA = 3;
+          }/* else if  ( radius > x) {
+           //  direction = -direction;
+           // speed2bolitaIA=0;
+           } */
+          else {
+            //   speedbolitaDA = 3;
+            //  speed2bolitaIA = 3;
+            speed=5;
           }
         }
 
-        if (keyCode == DOWN) {
-          y+=speed2bolitaIA;
-
-
-          if (y > 528-radius) {
-
-            speed2bolitaIA=0;
-          } else if  ( radius > y) {
-            direction = -direction;
-            speed2bolitaIA=0;
-          } else {
-            speedbolitaDA = 3;
-            speed2bolitaIA = 3;
-          }
-        }
+        /*    if (keyCode == DOWN) {
+         y+=speed2bolitaIA;
+         
+         
+         if (y > 528-radius) {
+         
+         speed2bolitaIA=0;
+         } else if  ( radius > y) {
+         direction = -direction;
+         speed2bolitaIA=0;
+         } else {
+         speedbolitaDA = 3;
+         speed2bolitaIA = 3;
+         }
+         }*/
       }
       if (abs(posicionfondo) > imgN4.width) posicionfondo = 0;
       image(imgN4, posicionfondo+imgN4.width, 0);
       image(imgN4, posicionfondo-imgN4.width, 0);
       ellipse(1200, 40, 20, 20);
-
       fill(0);
-    } else   if (gamestate==4) {
-      image(imgN4, 0, 0);
-
-
+    }
+    //nivel 3
+    else   if (gamestate==4) {
+      image(imgN4, posicionfondo, 0);
       if (mouseX>1180 && mouseX<1220  && mouseY>20  && mouseY<60) {
         if (mousePressed == true)
         {
@@ -138,50 +142,53 @@ class niveles {
 
         if (keyCode == LEFT) { // If it's the right arrow
           posicionfondo += speed3fondo; //izquierda
-          x -= speed2bolitaIA;  //derecha
+          //  x -= speed2bolitaIA;  //derecha
 
           // Face left
 
-          if  ( radius > x) {
-            direction = -direction;
-            speed2bolitaIA=0;
+          if  ( movimientobola<3) {
+           // direction = -direction;
+            //speed2bolitaIA=0;
+            speed=0;
           } else {
-            speedbolitaDA = 3;
-            speed2bolitaIA = 3;
+            //speedbolitaDA = 3;
+            //speed2bolitaIA = 3;
+            speed=5;
           }
         }
         if (keyCode == RIGHT) { // If it's the right arrow
           posicionfondo-=speed3fondo;
-          x+= speedbolitaDA;
-
-          if (x > width-radius) {
-
-            speedbolitaDA=0;
-            speed2bolitaIA = 3;
-          } else if  ( radius > x) {
-            direction = -direction;
-            speed2bolitaIA=0;
-          } else {
-            speedbolitaDA = 3;
-            speed2bolitaIA = 3;
+          // x+= speedbolitaDA;
+          if (movimientobola> 1196) {
+            speed=0;
+            // speedbolitaDA=0;
+            //speed2bolitaIA = 3;
+          }/* else if  ( radius > x) {
+           //  direction = -direction;
+           // speed2bolitaIA=0;
+           } */
+          else {
+            //   speedbolitaDA = 3;
+            //  speed2bolitaIA = 3;
+            speed=5;
           }
         }
 
-        if (keyCode == DOWN) {
-          y+=speed2bolitaIA;
-
-
-          if (y > 528-radius) {
-
-            speed2bolitaIA=0;
-          } else if  ( radius > y) {
-            direction = -direction;
-            speed2bolitaIA=0;
-          } else {
-            speedbolitaDA = 3;
-            speed2bolitaIA = 3;
-          }
-        }
+        /*     if (keyCode == DOWN) {
+         y+=speed2bolitaIA;
+         
+         
+         if (y > 528-radius) {
+         
+         speed2bolitaIA=0;
+         } else if  ( radius > y) {
+         direction = -direction;
+         speed2bolitaIA=0;
+         } else {
+         speedbolitaDA = 3;
+         speed2bolitaIA = 3;
+         }
+         }*/
       }
       if (abs(posicionfondo) > imgN4.width) posicionfondo = 0;
       image(imgN4, posicionfondo+imgN4.width, 0);
@@ -190,7 +197,7 @@ class niveles {
 
       fill(0);
     }
-    //nivel1 jugar
+    //nivel 1 
     else if (gamestate==0) {
 
       image(imgN, posicionfondo, 0);
@@ -210,36 +217,41 @@ class niveles {
 
         if (keyCode == LEFT) { // If it's the right arrow
           posicionfondo += speed3fondo; //izquierda
-          x -= speed2bolitaIA;  //derecha
+          //     x -= speed2bolitaIA;  //derecha
 
           // Face left
 
-          if  ( radius > x) {
-            direction = -direction;
-            speed2bolitaIA=0;
+          if  ( movimientobola < 3) {
+            // direction = -direction;
+            //  speed2bolitaIA=0;
+            speed=0;
           } else {
-            speedbolitaDA = 3;
-            speed2bolitaIA = 3;
+            // speedbolitaDA = 3;
+            //speed2bolitaIA = 3;
+            speed=5;
           }
         }
         if (keyCode == RIGHT) { // If it's the right arrow
           posicionfondo-=speed3fondo;
-          x+= speedbolitaDA;
+          //  x+= speedbolitaDA;
 
-          if (x > width-radius) {
-
-            speedbolitaDA=0;
-            speed2bolitaIA = 3;
-          } else if  ( radius > x) {
+          if (movimientobola > 1196) {
+            speed=0;
+            //  speedbolitaDA=0;
+            // speed2bolitaIA = 3;
+          } /*else if  ( radius > x) {
             direction = -direction;
             speed2bolitaIA=0;
-          } else {
-            speedbolitaDA = 3;
-            speed2bolitaIA = 3;
+          } 
+          */
+          else {
+          //  speedbolitaDA = 3;
+            //speed2bolitaIA = 3;
+            speed=5;
           }
         }
 
-        if (keyCode == DOWN) {
+       /* if (keyCode == DOWN) {
           y+=speed2bolitaIA;
 
 
@@ -254,12 +266,12 @@ class niveles {
             speed2bolitaIA = 3;
           }
         }
+        */
       }// gamestate
       if (abs(posicionfondo) > imgN.width) posicionfondo = 0;
       image(imgN, posicionfondo+imgN.width, 0);
       image(imgN, posicionfondo-imgN.width, 0);
       ellipse(1200, 40, 20, 20);
-
       fill(0);
     }
   }

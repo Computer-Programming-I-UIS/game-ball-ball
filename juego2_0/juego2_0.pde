@@ -5,7 +5,7 @@ int imageIndex=0;
 int imageIndex2=0;
 boolean direccionDerecha = true;//direccion de la bandera 
 float movimientobola = 50;
-float speed = 7;
+float speed = 5;
 
 
 
@@ -26,7 +26,7 @@ float x = 00;
 float y= 490;
 float speedbolitaDA = 3;
 float speed2bolitaIA = 3;
-float speed3fondo=3;
+float speed3fondo=4;
 int direction = 1;
 PImage img, img2;//imagenes inicio y nivles
 float posicionfondo=0;
