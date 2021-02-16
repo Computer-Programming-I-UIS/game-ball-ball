@@ -33,7 +33,7 @@ float posicionfondo=0;
 //posicion de las imagenes
 int posxI=0;
 int posYI=0;
-//PImage [] balls = new PImage[9];
+
 
 
 //Niveles 
@@ -86,14 +86,12 @@ switch(key) {
       //x2+=speed3;
       movimientobola+= speed;
        direccionDerecha = true;
-       //mage(carabolita1[imageIndex], movimientobola, height/2);
     imageIndex=(imageIndex+1) % carabolita1.length;
     }
     if (keyCode == LEFT) { // If it's the right arrow
       //x2+=speed3;
       movimientobola-= speed;
       direccionDerecha = false;
-      //image(carabolitaA[imageIndex2], movimientobola, height/2);
     imageIndex2=(imageIndex2+1) % carabolitaA.length;
   }
 }
