@@ -22,7 +22,7 @@ niveles carabola;//clase nivel
 float posY = 0;
 int radius = 40;
 int gamestate=1;// inicializacion del juego pantalla de inico
-float x = 50;
+float x = 00;
 float y= 490;
 float speedbolitaDA = 3;
 float speed2bolitaIA = 3;
