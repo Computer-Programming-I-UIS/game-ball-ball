@@ -54,7 +54,7 @@ void setup() {
   imgN3=loadImage("niveles.jpg");//fondo niveles
   imgN4=loadImage("nivel2.jpg");
   img = loadImage("fondo1.jpg");
-  img2=loadImage("ball.png");
+  img2=loadImage("fondo.png");
   imgh=loadImage("Home.png");
   imgr=loadImage("Reset.png");
   imgN5=loadImage("fondo5.jpg");
@@ -65,7 +65,6 @@ void setup() {
   nivel_2=new SoundFile(this, "nivel2.mp3");
  // nivel_3=new SoundFile(this, "nivel3.mp3");
 
-   //imageMode(CENTER);
   //salto de la bolita y animacion 
    carabolitaRun1 = loadImage("Captura de pantalla0.png");
    carabolitaJump = loadImage("Captura de pantalla0.png");
