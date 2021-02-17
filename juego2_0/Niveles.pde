@@ -44,6 +44,59 @@ class niveles {
           exit();
         }
       }
+      //creditos
+       if (mouseX>545 && mouseX < 685 && mouseY<510   && mouseY>370) {
+        if (mousePressed == true)
+        {
+           background(0);
+y1=y1-10;
+y2=y2-10;
+y3=y3-10;
+y4=y4-10;
+y5=y5-10;
+y6=y6-10;
+y7=y7-10;
+y8=y8-10;
+y9=y9-10;
+y10=y10-10;
+y11=y11-10;
+y12=y12-10;
+y13=y13-10;
+y14=y14-10;
+
+y15=y15-10;
+y16=y16-10;
+y17=y17-10;
+y18=y18-10;
+y19=y19-10;
+//y20=y20-10;
+  frameRate(6);
+  text("Ball Ball", 602, y1);
+  text("Productores y Programadores:",490, y2);
+  text("Jeyson Andres Sanchez Tolosa", 480, y3);
+  text("Cristian Melo Reina", 535, y4);
+  text("Programa o Aplicacion:", 520, y5);
+  text("Processing (Java)", 545, y6);
+  text("Graficos:", 585, y7);
+  text("Cristian Melo Reina", 525, y8);
+  text("Jeyson Andres Sanchez Tolosa", 480, y9);
+  text("Sonido:", 596, y10);
+  text("Cristian Melo Reina", 530, y11);
+  text("Jeyson Andres Sanchez Tolosa", 480, y12);
+  text("Agradecimientos Especiales:", 500, y13);
+  text("Creadores del juego original (Red Ball)",440, y14);
+  text("EU Producciones Musicales", 500, y15);
+  text("Creadores del juego Geometry Dash", 460, y16);
+  text("Enemigos en Ball Ball", 540, y17);
+  text("Tutor Alex Mantilla", 540, y18);
+  text("THE END ",590, y19);
+    fill(255, 0, 0);
+    if (y19<-2){
+      exit();
+    }
+
+        }
+      }
     }
     if (gamestate==2) {
       image(imgN3, 0, 0);
