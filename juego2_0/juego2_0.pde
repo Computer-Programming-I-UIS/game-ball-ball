@@ -66,6 +66,10 @@ PImage imgN, imgN2, imgN3,imgN4;// imagenes para los niveles
 
 void setup() {
   size(1300, 680);
+  PFont mono;
+  mono=loadFont("HighTowerText-Italic-48.vlw");
+  textFont(mono);
+  textSize(30);
   //Niveles imagenes cargadas 
   ellipseMode(RADIUS);
   imgN = loadImage("fondo4.jpg");//fondo nivel 1 
