@@ -1,3 +1,8 @@
+import ddf.minim.*;
+import processing.sound.*;
+//musica
+SoundFile sonidomenu,nivel_1,nivel_2, nivel_3;
+
 //salto de la bolita y amimacion
 PImage[] carabolita1  = new PImage[8];//vector para la animacion derecha 
 PImage [] carabolitaA = new PImage [8];//vector para la animacion izquierda 
@@ -52,6 +57,13 @@ void setup() {
   imgh=loadImage("Home.png");
   imgr=loadImage("Reset.png");
   imgN5=loadImage("fondo5.jpg");
+  
+  //sonido
+ sonidomenu = new SoundFile(this, "menu.mp3");
+ nivel_1=new SoundFile(this, "nivel1.mp3");
+  nivel_2=new SoundFile(this, "nivel2.mp3");
+ // nivel_3=new SoundFile(this, "nivel3.mp3");
+
    //imageMode(CENTER);
   //salto de la bolita y animacion 
    carabolitaRun1 = loadImage("Captura de pantalla0.png");

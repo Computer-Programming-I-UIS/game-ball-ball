@@ -18,7 +18,10 @@ class niveles {
     frameRate(30);
     //
     if (gamestate == 1) {
-
+if(!sonidomenu.isPlaying()){sonidomenu.play(1);sonidomenu.amp(0.075);}
+else if(nivel_2.isPlaying()){nivel_2.stop();}
+//else if(nivel_3.isPlaying()){nivel_3.stop();}
+ else if(nivel_2.isPlaying()){nivel_2.stop();}
       image(img2, posxI, posYI);
       text(mouseX, 100, 100);
       text(mouseY, 300, 100);
@@ -65,6 +68,8 @@ class niveles {
 
 
     else   if (gamestate==3) {
+      if(!nivel_2.isPlaying()){nivel_2.play(1);nivel_2.amp(0.075);}
+      if(sonidomenu.isPlaying()){sonidomenu.stop();}
       image(imgN4, posicionfondo, 0);
       carabolita.show();
       carabolita.mover();
@@ -151,6 +156,8 @@ class niveles {
     }
     //nivel 3
     else   if (gamestate==4) {
+      if(!nivel_2.isPlaying()){nivel_2.play(1);nivel_2.amp(0.075);}
+      if(sonidomenu.isPlaying()){sonidomenu.stop();}
       image(imgN5, posicionfondo, 0);
       carabolita.show();
       carabolita.mover();
@@ -231,9 +238,10 @@ class niveles {
     }
     //nivel 1 
     else if (gamestate==0) {
-
+      if(!nivel_2.isPlaying()){nivel_2.play(1);nivel_2.amp(0.075);}
+      if(sonidomenu.isPlaying()){sonidomenu.stop();}
       image(imgN, posicionfondo, 0);
-  text(mouseX, 100, 100);
+      text(mouseX, 100, 100);
        text(mouseY, 300, 100);
        fill(0);
       carabolita.show();
