@@ -1,9 +1,9 @@
 ## JUEGO DESTRUCTOR
 ### Autores
 
-Jose Eugenio Vargas Vargas 2192137
+Cristian Melo Reina 
 
-Andres David Saavedra Rincon 2162891
+Jeyson Andres Sanchez Tolosa 
 
 ### Introduccion
 
