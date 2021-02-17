@@ -36,6 +36,15 @@ int  y19=1800;
 PImage carabolitaJump;//iamgen para salto 
 PImage carabolitaRun1;//iamgen para possalto
 
+int enemigotime =0;
+int mintimebetobs= 60;
+int randomadiccion =0;
+int groundcounter =0;
+float speed = 10;
+
+PImage clasificacio1;
+PImage clasificacio2;
+
 int groundHeight = 150;// altura del suelo de la bolita
 int figuraXpos = 200;//Posicion x de la figura 
 
@@ -62,7 +71,8 @@ int posYI=0;
 
 
 //Niveles 
-PImage imgN, imgN2, imgN3,imgN4;// imagenes para los niveles 
+PImage imgN, imgN2, imgN3,imgN4,imagenc1,imagenc2,enm1,enm2;// imagenes para los niveles 
+
 
 void setup() {
   size(1300, 680);
@@ -81,6 +91,8 @@ void setup() {
   imgh=loadImage("Home.png");
   imgr=loadImage("Reset.png");
   imgN5=loadImage("fondo5.jpg");
+  enm1 = loadImage("enemigo1.jpg");
+  enm2 = loadImage("enemigo2.jpg");
   
   //sonido
  sonidomenu = new SoundFile(this, "menu.mp3");
@@ -118,20 +130,19 @@ switch(key) {
     carabolita.jump(); 
     break;
   }
+ /*
   if ( key == CODED) {// If it's a coded key}.
 
     if (keyCode == RIGHT) { // If it's the right arrow
-      //x2+=speed3;
       movimientobola+= speed;
        direccionDerecha = true;
     imageIndex=(imageIndex+1) % carabolita1.length;
     }
     if (keyCode == LEFT) { // If it's the right arrow
-      //x2+=speed3;
       movimientobola-= speed;
       direccionDerecha = false;
     imageIndex2=(imageIndex2+1) % carabolitaA.length;
   }
 }
-  
+  */
   }
