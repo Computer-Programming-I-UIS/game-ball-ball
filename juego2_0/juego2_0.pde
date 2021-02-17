@@ -27,7 +27,8 @@ niveles carabola;//clase nivel
 float posY = 0;
 int radius = 40;
 int gamestate=1;// inicializacion del juego pantalla de inico
-float x = 00;
+float x1=300,x2=460,x3=460,x22=440,x4=780,x5=1100,x=0;
+float x6=460,x7=440,x72=460,x8=620,x9=990,x10=1310;
 float y= 490;
 float speedbolitaDA = 3;
 float speed2bolitaIA = 3;
@@ -53,7 +54,7 @@ void setup() {
   imgN3=loadImage("niveles.jpg");//fondo niveles
   imgN4=loadImage("nivel2.jpg");
   img = loadImage("fondo1.jpg");
-  img2=loadImage("ball.png");
+  img2=loadImage("fondo.png");
   imgh=loadImage("Home.png");
   imgr=loadImage("Reset.png");
   imgN5=loadImage("fondo5.jpg");
@@ -64,7 +65,6 @@ void setup() {
   nivel_2=new SoundFile(this, "nivel2.mp3");
  // nivel_3=new SoundFile(this, "nivel3.mp3");
 
-   //imageMode(CENTER);
   //salto de la bolita y animacion 
    carabolitaRun1 = loadImage("Captura de pantalla0.png");
    carabolitaJump = loadImage("Captura de pantalla0.png");

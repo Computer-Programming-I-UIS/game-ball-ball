@@ -21,19 +21,19 @@ class niveles {
 if(!sonidomenu.isPlaying()){sonidomenu.play(1);sonidomenu.amp(0.075);}
 else if(nivel_2.isPlaying()){nivel_2.stop();}
 //else if(nivel_3.isPlaying()){nivel_3.stop();}
- else if(nivel_2.isPlaying()){nivel_2.stop();}
+ //else if(nivel_2.isPlaying()){nivel_2.stop();}
       image(img2, posxI, posYI);
       text(mouseX, 100, 100);
       text(mouseY, 300, 100);
       fill(0);
-      if (mouseX>540 && mouseX < 670 && mouseY<280   && mouseY>150) {
+      if (mouseX>337 && mouseX < 477 && mouseY>374  && mouseY<509) {
         if (mousePressed == true)
         {
           gamestate =2;
         }
       }
       //
-      if (mouseX>540 && mouseX < 670 && mouseY<610   && mouseY>470) {
+      if (mouseX>740&& mouseX < 895 && mouseY<610   && mouseY>365) {
         if (mousePressed == true)
         {
           exit();
@@ -94,59 +94,33 @@ else if(nivel_2.isPlaying()){nivel_2.stop();}
 
         if (keyCode == LEFT) { // If it's the right arrow
           posicionfondo += speed3fondo; //izquierda
-          // x -= speed;
-          //x+=speed;//derecha
-          //  movimientobola+= speed;
-          // Face left
           println(movimientobola);
           if  (  movimientobola<3) {
-            //  direction = -direction;
-            //speed2bolitaIA=0;
+            
             speed=0;
           } else {
-            ///speedbolitaDA = 3;
-            //speed2bolitaIA = 3;
+          
             speed=5;
-            // movimientobola-= 12;
+            
           }
         }
-        //  movimientobola= 50;
+        
         if (keyCode == RIGHT) { // If it's the right arrow
           posicionfondo-=speed3fondo;
-          //speed=7;
+          
           println(movimientobola);
-          // x+= speedbolitaDA;
+          
 
           if (movimientobola> 1196) {
             speed=0;
-            // speedbolitaDA=0;
-            //speed2bolitaIA = 3;
-          }/* else if  ( radius > x) {
-           //  direction = -direction;
-           // speed2bolitaIA=0;
-           } */
+            
+          } 
+       } 
           else {
-            //   speedbolitaDA = 3;
-            //  speed2bolitaIA = 3;
+           
             speed=5;
           }
         }
-
-        /*    if (keyCode == DOWN) {
-         y+=speed2bolitaIA;
-         
-         
-         if (y > 528-radius) {
-         
-         speed2bolitaIA=0;
-         } else if  ( radius > y) {
-         direction = -direction;
-         speed2bolitaIA=0;
-         } else {
-         speedbolitaDA = 3;
-         speed2bolitaIA = 3;
-         }
-         }*/
       }
       if (abs(posicionfondo) > imgN4.width) posicionfondo = 0;
       image(imgN4, posicionfondo+imgN4.width, 0);
@@ -182,17 +156,12 @@ else if(nivel_2.isPlaying()){nivel_2.stop();}
 
         if (keyCode == LEFT) { // If it's the right arrow
           posicionfondo += speed3fondo; //izquierda
-          //  x -= speed2bolitaIA;  //derecha
-
-          // Face left
 
           if  ( movimientobola<3) {
-            // direction = -direction;
-            //speed2bolitaIA=0;
+            
             speed=0;
           } else {
-            //speedbolitaDA = 3;
-            //speed2bolitaIA = 3;
+            
             speed=5;
           }
         }
@@ -201,40 +170,32 @@ else if(nivel_2.isPlaying()){nivel_2.stop();}
           // x+= speedbolitaDA;
           if (movimientobola> 1196) {
             speed=0;
-            // speedbolitaDA=0;
-            //speed2bolitaIA = 3;
-          }/* else if  ( radius > x) {
-           //  direction = -direction;
-           // speed2bolitaIA=0;
-           } */
+          }
+           
           else {
-            //   speedbolitaDA = 3;
-            //  speed2bolitaIA = 3;
+            
             speed=5;
           }
         }
 
-        /*     if (keyCode == DOWN) {
-         y+=speed2bolitaIA;
-         
-         
-         if (y > 528-radius) {
-         
-         speed2bolitaIA=0;
-         } else if  ( radius > y) {
-         direction = -direction;
-         speed2bolitaIA=0;
-         } else {
-         speedbolitaDA = 3;
-         speed2bolitaIA = 3;
-         }
-         }*/
       }
+      println(posicionfondo);
+
       if (abs(posicionfondo) > imgN5.width) posicionfondo = 0;
       image(imgN5, posicionfondo+imgN5.width, 0);
       image(imgN5, posicionfondo-imgN5.width, 0);
       image(imgh, 1220, 15);
       image(imgr, 1160, 15);
+      
+      quad(x1, 500, x1, 520, x6, 520, x6, 500);
+      quad(x2, 420, x22, 420, x7, 520, x72, 520);
+      quad(x3, 420, x3, 440, x8, 440, x8, 420);
+      quad(x4, 340, x4, 360, x9, 360, x9, 340);
+      quad(x5, 420, x5, 440, x10, 440, x10, 420);
+      fill(0);
+
+      
+      
     }
     //nivel 1 
     else if (gamestate==0) {
