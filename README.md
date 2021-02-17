@@ -27,7 +27,7 @@ Apto para todo el publico
 
 
 ### Creditos
-- Cristian Melo Estudiante ingeniería eléctrica
+- Cristian Melo Estudiante ingeniería eléctrica (2190706)
 - Jeyson Sanchez Estudiante ingeniería eléctrica
 
 ### Librerias a descargar 
