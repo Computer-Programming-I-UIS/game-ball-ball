@@ -17,8 +17,10 @@ class niveles {
   void level() {
     frameRate(30);
     //
+   
     if (gamestate == 1) {
 
+  textSize(30);
       if (!sonidomenu.isPlaying()) {
         sonidomenu.play(1);
         sonidomenu.amp(0.075);
@@ -48,7 +50,10 @@ class niveles {
        if (mouseX>545 && mouseX < 685 && mouseY<510   && mouseY>370) {
         if (mousePressed == true)
         {
-           background(0);
+           PFont mono;
+  mono=loadFont("HighTowerText-Italic-48.vlw");
+  textFont(mono);
+          background(0);
 y1=y1-10;
 y2=y2-10;
 y3=y3-10;
@@ -71,6 +76,7 @@ y18=y18-10;
 y19=y19-10;
 //y20=y20-10;
   frameRate(6);
+    fill(255);
   text("Ball Ball", 602, y1);
   text("Productores y Programadores:",490, y2);
   text("Jeyson Andres Sanchez Tolosa", 480, y3);
@@ -90,7 +96,7 @@ y19=y19-10;
   text("Enemigos en Ball Ball", 540, y17);
   text("Tutor Alex Mantilla", 540, y18);
   text("THE END ",590, y19);
-    fill(255, 0, 0);
+  
     if (y19<-2){
       exit();
     }
