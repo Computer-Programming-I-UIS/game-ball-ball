@@ -30,8 +30,8 @@ class niveles {
 
 
       image(img2, posxI, posYI);
-     text(mouseX, 100, 100);
-      text(mouseY, 300, 100);
+    // text(mouseX, 100, 100);
+      //text(mouseY, 300, 100);
       fill(0);
       if (mouseX>340 && mouseX < 477 && mouseY<510   && mouseY>370) {
         if (mousePressed == true)
