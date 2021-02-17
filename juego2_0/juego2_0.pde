@@ -11,7 +11,26 @@ int imageIndex2=0;
 boolean direccionDerecha = true;//direccion de la bandera 
 float movimientobola = 50;
 float speed = 5;
-
+int  y1=500;
+int y2=570;
+int  y3=640;
+int y4=710;
+int  y5=780;
+int y6=850;
+int  y7=920;
+int y8=990;
+int  y9=1060;
+int y10=1130;
+int  y11=1200;
+int y12=1270;
+int  y13=1340;
+int y14=1410;
+int  y15=1480;
+int y16=1550;//cancionees
+int  y17=1620;
+int y18=1690;
+int  y19=1800;
+//int y20=1830;
 
 
 PImage carabolitaJump;//iamgen para salto 
