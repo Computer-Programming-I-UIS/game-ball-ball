@@ -140,8 +140,7 @@ y19=y19-10;
         sonidomenu.stop();
       }
       image(imgN4, posicionfondo, 0);
-      carabolita.show();
-      carabolita.mover();
+      
 
       if (mouseX>1220 && mouseX<1268  && mouseY>18  && mouseY<62) {
         if (mousePressed == true)
@@ -200,6 +199,8 @@ y19=y19-10;
       image(imgN4, posicionfondo-imgN4.width, 0);
       image(imgh, 1220, 15);
       image(imgr, 1160, 15);
+      carabolita.show();
+      carabolita.mover();
     }
     //nivel 3
     else   if (gamestate==4) {
@@ -211,8 +212,7 @@ y19=y19-10;
         sonidomenu.stop();
       }
       image(imgN5, posicionfondo, 0);
-      carabolita.show();
-      carabolita.mover();
+     
 
       if (mouseX>1220 && mouseX<1268  && mouseY>18  && mouseY<62) {
         if (mousePressed == true)
@@ -298,6 +298,8 @@ y19=y19-10;
       image(imgN5, posicionfondo-imgN5.width, 0);
       image(imgh, 1220, 15);
       image(imgr, 1160, 15);
+       carabolita.show();
+      carabolita.mover();
       quad(x1, 500, x1, 520, x6, 520, x6, 500);
       quad(x2, 420, x22, 420, x7, 520, x72, 520);
       quad(x3, 420, x3, 440, x8, 440, x8, 420);
@@ -318,8 +320,7 @@ y19=y19-10;
       //   text(mouseX, 100, 100);
       // text(mouseY, 300, 100);
       //fill(0);
-      carabolita.show();
-      carabolita.mover();
+  
 
       imageMode(CORNER);
       if (mouseX>1220 && mouseX<1268  && mouseY>18  && mouseY<62) {
@@ -370,6 +371,8 @@ y19=y19-10;
       image(imgN, posicionfondo-imgN.width, 0);
       image(imgh, 1220, 15);
       image(imgr, 1160, 15);
+          carabolita.show();
+      carabolita.mover();
     }
   }
 }
