@@ -36,6 +36,10 @@ int  y19=1800;
 PImage carabolitaJump;//iamgen para salto 
 PImage carabolitaRun1;//iamgen para possalto
 
+
+
+
+
 int enemigotime =0;
 int mintimebetobs= 60;
 int randomadiccion =0;
@@ -44,7 +48,7 @@ float speed = 10;
 
 PImage clasificacio1;
 PImage clasificacio2;
-
+float fondox=0;
 int groundHeight = 150;// altura del suelo de la bolita
 int figuraXpos = 200;//Posicion x de la figura 
 
@@ -55,11 +59,11 @@ niveles carabola;//clase nivel
 float posY = 0;
 int radius = 40;
 int gamestate=1;// inicializacion del juego pantalla de inico
-float x1=300,x2=460,x3=460,x22=440,x4=780,x5=1100,x=0;
-float x6=460,x7=440,x72=460,x8=620,x9=990,x10=1310;
+//float x1=300,x2=460,x3=460,x22=440,x4=780,x5=1100,x=0;
+//float x6=460,x7=440,x72=460,x8=620,x9=990,x10=1310;
 float y= 490;
-float speedbolitaDA = 3;
-float speed2bolitaIA = 3;
+//float speedbolitaDA = 3;
+//float speed2bolitaIA = 3;
 float speed3fondo=4;
 int direction = 1;
 PImage img, img2,imgh,imgr,imgN5;//imagenes inicio y nivles
@@ -80,6 +84,8 @@ void setup() {
   size(1300, 680);
   //Niveles imagenes cargadas 
   ellipseMode(RADIUS);
+  imagenc2 = loadImage("Juego.jpg");
+  imagenc1 = loadImage("clasf.png");
   imgN = loadImage("fondo4.jpg");//fondo nivel 1 
 //  imgN2=loadImage("maxresdefault.png");//fondo inicio
   imgN3=loadImage("niveles.jpg");//fondo niveles
@@ -103,7 +109,7 @@ void setup() {
    carabolitaJump = loadImage("Captura de pantalla0.png");
  carabola = new niveles(); 
  carabolita = new figura();
-;
+
  for (int i = 0; i < carabolita1.length; i++)
   {
     carabolita1[i]=loadImage("Captura de pantalla" + i + ".png");
@@ -116,11 +122,11 @@ void setup() {
 
 void draw() {
     carabola.level();
-      if (direccionDerecha) {
+      /*if (direccionDerecha) {
       image(carabolita1[imageIndex], movimientobola, 430);
     } else {
       image(carabolitaA[imageIndex2], movimientobola, 430);
-    }
+    }*/
 }
 void keyPressed() {
 switch(key) {
@@ -144,5 +150,6 @@ switch(key) {
 }
   */
   }
+  
   
   
