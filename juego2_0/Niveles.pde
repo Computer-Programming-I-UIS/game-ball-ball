@@ -42,7 +42,12 @@ class niveles {
     }
       if (gamestate==2) {
         image(imgN3, 0, 0);
-
+if (mouseX>1220 && mouseX<1268  && mouseY>18  && mouseY<62) {
+    if (mousePressed == true)
+    {
+      gamestate =1;
+    }
+  }
         if (mouseX>376 && mouseX < 480 && mouseY<320   && mouseY>230) {
           if (mousePressed == true)
           {
@@ -89,7 +94,7 @@ class niveles {
         }
         if (keyPressed && (key == CODED)) {// If it's a coded key}.
 
-          if (keyCode == LEFT) { // If it's the right arrow
+      /*    if (keyCode == LEFT) { // If it's the right arrow
             posicionfondo += speed3fondo; //izquierda
 
 
@@ -119,7 +124,7 @@ class niveles {
               speed=5;
             }
           
-        }
+        }*/
       }
    
     if (abs(posicionfondo) > imgN4.width) posicionfondo = 0;
@@ -153,7 +158,7 @@ else   if (gamestate==4) {
   }
   if (keyPressed && (key == CODED)) {// If it's a coded key}.
 
-    if (keyCode == LEFT) { // If it's the right arrow
+  /*  if (keyCode == LEFT) { // If it's the right arrow
       posicionfondo += speed3fondo; //izquierda
 
       if  ( movimientobola<3) {
@@ -177,7 +182,7 @@ else   if (gamestate==4) {
 
       speed=5;
     }
-  }
+  }*/
 } 
 println(posicionfondo);
 
@@ -194,24 +199,7 @@ carabolita.show();
 
 
 
-quad(x1, 500, x1, 520, x6, 520, x6, 500);
-quad(x2, 420, x22, 420, x7, 520, x72, 520);
-quad(x3, 420, x3, 440, x8, 440, x8, 420);
-quad(x4, 340, x4, 360, x9, 360, x9, 340);
-quad(x5, 420, x5, 440, x10, 440, x10, 420);
-fill(0);
 
-/*x1=posicionfondo;
- x2=posicionfondo;
- x3=posicionfondo;
- x4=posicionfondo;
- x5=posicionfondo;
- x6=posicionfondo;
- x7=posicionfondo;
- x72=posicionfondo;
- x8=posicionfondo;
- x9=posicionfondo;
- x10=posicionfondo;*/
 
 
 
@@ -240,7 +228,7 @@ else if (gamestate==0) {
   }
   if (keyPressed && (key == CODED)) {// If it's a coded key}.
 
-    if (keyCode == LEFT) { // If it's the right arrow
+ /*   if (keyCode == LEFT) { // If it's the right arrow
       posicionfondo += speed3fondo; //izquierda
       //     x -= speed2bolitaIA;  //derecha
 
@@ -266,7 +254,7 @@ else if (gamestate==0) {
 
         speed=5;
       }
-    }
+    }*/
   }// gamestate
   if (abs(posicionfondo) > imgN.width) posicionfondo = 0;
   image(imgN, posicionfondo+imgN.width, 0);
