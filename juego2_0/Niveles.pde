@@ -11,6 +11,7 @@ class niveles {
   int posxI=0;
   int posYI=0;
   float win=1245520.0;
+   float posix;
   niveles() {
   }
 
@@ -19,7 +20,7 @@ class niveles {
     //
     if (gamestate == 1) {
 
-      //carabola1.menu();
+      carabola1.menu();
 
       image(img2, posxI, posYI);
       image(imagenc1, 491, 550);
@@ -134,7 +135,7 @@ class niveles {
 
     //nivel 3
     else   if (gamestate==4) {
-      //carabola1.jugar();
+      carabola1.jugar();
       image(imgN5, posicionfondo, 0);
 
 
@@ -176,9 +177,9 @@ class niveles {
 
     //nivel 1 
     else if (gamestate==0) {
-      //carabola1.jugar();
+         
+      carabola1.jugar();
       image(imgN, posicionfondo, 0);
-
       imageMode(CORNER);
       if (mouseX>1220 && mouseX<1268  && mouseY>18  && mouseY<62) {
         if (mousePressed == true)
@@ -204,13 +205,15 @@ class niveles {
       image(imgN, posicionfondo-imgN.width, 0);
       image(imgh, 1220, 15);
       image(imgr, 1160, 15);
+     
       carabolita.show();
       carabolita.mover();
+    updateenemigos();
       //carabolita.bandera();
     }
     // nivel 2
     else if (gamestate==3) {
-      //carabola1.jugar();
+      carabola1.jugar();
       image(imgN, posicionfondo, 0);
 
       imageMode(CORNER);

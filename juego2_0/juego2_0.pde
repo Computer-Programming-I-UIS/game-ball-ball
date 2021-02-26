@@ -4,8 +4,6 @@ import processing.sound.*;
 SoundFile sonidomenu,nivel_1,nivel_2, nivel_3;
 
 //salto de la bolita y amimacion
-PImage[] carabolita1  = new PImage[8];//vector para la animacion derecha 
-PImage [] carabolitaA = new PImage [8];//vector para la animacion izquierda 
 int imageIndex=0;
 int imageIndex2=0;
 boolean direccionDerecha = true;//direccion de la bandera 
@@ -36,13 +34,13 @@ int  y19=1800;
 PImage carabolitaJump;//iamgen para salto 
 PImage carabolitaRun1;//iamgen para possalto
 
-
+ArrayList<enemigo> enemigos = new ArrayList<enemigo>();
 
 
 
 int enemigotime =0;
 int mintimebetobs= 60;
-int randomadiccion =0;
+int randomadicion =0;
 int groundcounter =0;
 float speed = 10;
 
@@ -54,8 +52,8 @@ int figuraXpos = 200;//Posicion x de la figura
 
 figura carabolita;//clase figura 
 niveles carabola;//clase nivel
-
-
+musica carabola1;
+enemigo carabol;
 float posY = 0;
 int radius = 40;
 int gamestate=1;// inicializacion del juego pantalla de inico
@@ -103,6 +101,7 @@ void setup() {
  nivel_1=new SoundFile(this, "nivel1.mp3");
   nivel_2=new SoundFile(this, "nivel2.mp3");
  // nivel_3=new SoundFile(this, "nivel3.mp3");
+carabola1 =new musica();
 
   //salto de la bolita y animacion 
    carabolitaRun1 = loadImage("Captura de pantalla0.png");
@@ -110,7 +109,7 @@ void setup() {
  carabola = new niveles(); 
  carabolita = new figura();
 
- for (int i = 0; i < carabolita1.length; i++)
+/* for (int i = 0; i < carabolita1.length; i++)
   {
     carabolita1[i]=loadImage("Captura de pantalla" + i + ".png");
   }
@@ -118,10 +117,12 @@ void setup() {
   {
      carabolitaA[i2]=loadImage("Captura depantalla" + i2 + ".png");
   }
-}
 
+*/
+}
 void draw() {
     carabola.level();
+    
       /*if (direccionDerecha) {
       image(carabolita1[imageIndex], movimientobola, 430);
     } else {
@@ -150,6 +151,66 @@ switch(key) {
 }
   */
   }
+  void updateenemigos(){
+cargenemigos();
+  carabolita.show();
+  if(!carabolita.dead){
+    enemigotime++;
+    speed += 0.0017;
+    ellipse(56,56,56,56);
+    if(enemigotime > mintimebetobs + randomadicion){
+      addObstacle();
+    }
+   moveenemigos();
+    carabolita.update();
+  }
+  else{
+    textSize(32);
+    fill(0);
+    text("YOU DEAD! ", 180, 200);
+    
+  }
+}
+
+void cargenemigos(){
   
+  for(int i = 0; i < enemigos.size(); i++){
+    enemigos.get(i).carg();
+  }
+ 
+}
+
+void addObstacle(){
+  if(random(1) < 0.15){
+  }
+  else{
+    enemigos.add(new enemigo(floor(random(1))));
+  }
+  
+  randomadicion = floor(random(50));
+  enemigotime = 0;
+}
+
+void moveenemigos(){
+
+  for(int i = 0; i < enemigos.size(); i++){
+    enemigos.get(i).mov(speed);
+    if(enemigos.get(i).posix < -figuraXpos){
+      enemigos.remove(i);
+      i--;
+    }
+  }
+  
+}
+
+void reset(){
+  carabolita = new figura();
+  enemigos = new ArrayList<enemigo>();
+  
+  enemigotime = 0;
+  randomadicion = floor(random(50));
+  groundcounter = 0;
+  speed = 10;
+}
   
   
