@@ -5,13 +5,16 @@ class niveles {
   float y= 490;
   float speedbolitaDA = 3;
   float speed2bolitaIA = 3;
-  float speed3fondo=6;
+  float speed3fondo=14;
+  float speed2fondo=10;
+  float speed1fondo=6;
+
   int direction = 1;
   float posicionfondo=0;
   int posxI=0;
   int posYI=0;
-  float win=1245520.0;
-   float posix;
+  //  float win=1245520.0;
+  float posix;
   niveles() {
   }
 
@@ -19,6 +22,11 @@ class niveles {
     frameRate(30);
     //
     if (gamestate == 1) {
+
+      //Limpiar el arreglo de enemigos
+      while (enemigos.size() > 0) {
+        enemigos.remove(0);
+      }
 
       carabola1.menu();
 
@@ -46,54 +54,57 @@ class niveles {
       if (mouseX>544 && mouseX < 685 && mouseY<510   && mouseY>370) {
         if (mousePressed == true)
         {
-
-          PFont mono;
-          mono=loadFont("HighTowerText-Italic-48.vlw");
-          textFont(mono);
-          textSize(30);
-          background(0);
-          y4=y4-10;
-          y5=y5-10;
-          y6=y6-10;
-          y7=y7-10;
-          y8=y8-10;
-          y9=y9-10;
-          y10=y10-10;
-          y11=y11-10;
-          y12=y12-10;
-          y13=y13-10;
-          y14=y14-10;
-
-          y15=y15-10;
-          y16=y16-10;
-          y17=y17-10;
-          y18=y18-10;
-          y19=y19-10;
-          //y20=y20-10;
-
-          frameRate(6);
-          text("Ball Ball", 602, y4);
-          text("Programa o Aplicacion:", 520, y5);
-          text("Processing (Java)", 545, y6);
-          text("Graficos:", 585, y7);
-          text("Cristian Melo Reina", 525, y8);
-          text("Jeyson Andres Sanchez Tolosa", 480, y9);
-          text("Sonido:", 596, y10);
-          text("Cristian Melo Reina", 530, y11);
-          text("Jeyson Andres Sanchez Tolosa", 480, y12);
-          text("Agradecimientos Especiales:", 500, y13);
-          text("Creadores del juego original (Red Ball)", 440, y14);
-          text("EU Producciones Musicales", 500, y15);
-          text("Creadores del juego Geometry Dash", 460, y16);
-          text("Enemigos en Ball Ball", 540, y17);
-          text("Tutor Alex Mantilla", 540, y18);
-          text("THE END ", 590, y19);
-          //  delay(3000);
-          fill(255, 0, 0);
-          if (y19<-2) {
-            exit();
-          }
+          gamestate=85;
         }
+      }
+    }
+    if (gamestate==85) {
+      PFont mono;
+      mono=loadFont("HighTowerText-Italic-48.vlw");
+      textFont(mono);
+      textSize(30);
+      background(0);
+      y4=y4-10;
+      y5=y5-10;
+      y6=y6-10;
+      y7=y7-10;
+      y8=y8-10;
+      y9=y9-10;
+      y10=y10-10;
+      y11=y11-10;
+      y12=y12-10;
+      y13=y13-10;
+      y14=y14-10;
+
+      y15=y15-10;
+      y16=y16-10;
+      y17=y17-10;
+      y18=y18-10;
+      y19=y19-10;
+      //y20=y20-10;
+
+      frameRate(6);
+      text("Ball Ball", 602, y4);
+      text("Programa o Aplicacion:", 520, y5);
+      text("Processing (Java)", 545, y6);
+      text("Graficos:", 585, y7);
+      text("Cristian Melo Reina", 525, y8);
+      text("Jeyson Andres Sanchez Tolosa", 480, y9);
+      text("Sonido:", 596, y10);
+      text("Cristian Melo Reina", 530, y11);
+      text("Jeyson Andres Sanchez Tolosa", 480, y12);
+      text("Agradecimientos Especiales:", 500, y13);
+      text("Creadores del juego original (Red Ball)", 440, y14);
+      text("EU Producciones Musicales", 500, y15);
+      text("Creadores del juego Geometry Dash", 460, y16);
+      text("Enemigos en Ball Ball", 540, y17);
+      text("Tutor Alex Mantilla", 540, y18);
+      text("THE END ", 590, y19);
+      //  delay(3000);
+      fill(255, 0, 0);
+
+      if ( (keyPressed && key == 32) || y19<-2) {
+        gamestate = 1;
       }
     }
     if (gamestate==2) {
@@ -160,8 +171,6 @@ class niveles {
       if (keyPressed && (key == CODED)) {// If it's a coded key}.
       }  
 
-      fondox= fondox + (posicionfondo*(-1));
-      println(fondox);
 
 
       if (abs(posicionfondo) > imgN5.width) posicionfondo = 0;
@@ -177,7 +186,7 @@ class niveles {
 
     //nivel 1 
     else if (gamestate==0) {
-         
+   carabolita.chocar(enemigos);
       carabola1.jugar();
       image(imgN, posicionfondo, 0);
       imageMode(CORNER);
@@ -196,7 +205,7 @@ class niveles {
           movimientobola=50;
         }
       }
-      posicionfondo-=speed3fondo;
+      posicionfondo-=speed1fondo;
 
       if (keyPressed && (key == CODED)) {// If it's a coded key}.
       }// gamestate
@@ -205,10 +214,11 @@ class niveles {
       image(imgN, posicionfondo-imgN.width, 0);
       image(imgh, 1220, 15);
       image(imgr, 1160, 15);
-     
+
       carabolita.show();
       carabolita.mover();
-    updateenemigos();
+   
+      updateenemigos();
       //carabolita.bandera();
     }
     // nivel 2
@@ -232,7 +242,7 @@ class niveles {
           movimientobola=50;
         }
       }
-      posicionfondo-=speed3fondo;
+      posicionfondo-=speed2fondo;
 
       if (keyPressed && (key == CODED)) {// If it's a coded key}.
       }// gamestate
