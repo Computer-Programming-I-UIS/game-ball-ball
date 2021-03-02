@@ -1,7 +1,7 @@
 import ddf.minim.*;
 import processing.sound.*;
 //musica
-SoundFile sonidomenu,nivel_1,nivel_2, nivel_3;
+SoundFile sonidomenu, nivel_1, nivel_2, nivel_3;
 
 //salto de la bolita y amimacion
 int imageIndex=0;
@@ -42,8 +42,7 @@ int enemigotime =0;
 int mintimebetobs= 60;
 int randomadicion =0;
 int groundcounter =0;
-float speed = 10;
-
+float speed = 3;
 PImage clasificacio1;
 PImage clasificacio2;
 float fondox=0;
@@ -64,7 +63,7 @@ float y= 490;
 //float speed2bolitaIA = 3;
 float speed3fondo=4;
 int direction = 1;
-PImage img, img2,imgh,imgr,imgN5;//imagenes inicio y nivles
+PImage img, img2, imgh, imgr, imgN5;//imagenes inicio y nivles
 float posicionfondo=0;
 //posicion de las imagenes
 int posxI=0;
@@ -73,19 +72,19 @@ int posYI=0;
 
 
 //Niveles 
-PImage imgN, imgN2, imgN3,imgN4,imagenc1,imagenc2,enm1,enm2;// imagenes para los niveles 
+PImage imgN, imgN2, imgN3, imgN4, imagenc1, imagenc2, enm1, enm2, imgper;// imagenes para los niveles 
 
 
 void setup() {
-  
-  
+
+
   size(1300, 680);
   //Niveles imagenes cargadas 
   ellipseMode(RADIUS);
   imagenc2 = loadImage("Juego.jpg");
   imagenc1 = loadImage("clasf.png");
   imgN = loadImage("fondo4.jpg");//fondo nivel 1 
-//  imgN2=loadImage("maxresdefault.png");//fondo inicio
+  //  imgN2=loadImage("maxresdefault.png");//fondo inicio
   imgN3=loadImage("niveles.jpg");//fondo niveles
   imgN4=loadImage("nivel2.jpg");
   img = loadImage("fondo1.jpg");
@@ -95,122 +94,117 @@ void setup() {
   imgN5=loadImage("fondo5.jpg");
   enm1 = loadImage("enemigo1.jpg");
   enm2 = loadImage("enemigo2.jpg");
-  
+  imgper=loadImage("perdiste.png");
+
   //sonido
- sonidomenu = new SoundFile(this, "menu.mp3");
- nivel_1=new SoundFile(this, "nivel1.mp3");
+  sonidomenu = new SoundFile(this, "menu.mp3");
+  nivel_1=new SoundFile(this, "nivel1.mp3");
   nivel_2=new SoundFile(this, "nivel2.mp3");
- // nivel_3=new SoundFile(this, "nivel3.mp3");
-carabola1 =new musica();
+  // nivel_3=new SoundFile(this, "nivel3.mp3");
+  carabola1 =new musica();
 
   //salto de la bolita y animacion 
-   carabolitaRun1 = loadImage("Captura de pantalla0.png");
-   carabolitaJump = loadImage("Captura de pantalla0.png");
- carabola = new niveles(); 
- carabolita = new figura();
+  carabolitaRun1 = loadImage("Captura de pantalla0.png");
+  carabolitaJump = loadImage("Captura de pantalla0.png");
+  carabola = new niveles(); 
+  carabolita = new figura();
 
-/* for (int i = 0; i < carabolita1.length; i++)
-  {
-    carabolita1[i]=loadImage("Captura de pantalla" + i + ".png");
-  }
-  for(int i2 =0; i2<carabolitaA.length; i2++)
-  {
-     carabolitaA[i2]=loadImage("Captura depantalla" + i2 + ".png");
-  }
-
-*/
+  /* for (int i = 0; i < carabolita1.length; i++)
+   {
+   carabolita1[i]=loadImage("Captura de pantalla" + i + ".png");
+   }
+   for(int i2 =0; i2<carabolitaA.length; i2++)
+   {
+   carabolitaA[i2]=loadImage("Captura depantalla" + i2 + ".png");
+   }
+   
+   */
 }
 void draw() {
-    carabola.level();
-    
-      /*if (direccionDerecha) {
-      image(carabolita1[imageIndex], movimientobola, 430);
-    } else {
-      image(carabolitaA[imageIndex2], movimientobola, 430);
-    }*/
+  carabola.level();
+
+  /*if (direccionDerecha) {
+   image(carabolita1[imageIndex], movimientobola, 430);
+   } else {
+   image(carabolitaA[imageIndex2], movimientobola, 430);
+   }*/
 }
 void keyPressed() {
-switch(key) {
+  switch(key) {
   case' ':
     carabolita.jump(); 
     break;
   }
- /*
+  /*
   if ( key == CODED) {// If it's a coded key}.
-
-    if (keyCode == RIGHT) { // If it's the right arrow
-      movimientobola+= speed;
-       direccionDerecha = true;
-    imageIndex=(imageIndex+1) % carabolita1.length;
-    }
-    if (keyCode == LEFT) { // If it's the right arrow
-      movimientobola-= speed;
-      direccionDerecha = false;
-    imageIndex2=(imageIndex2+1) % carabolitaA.length;
-  }
+   
+   if (keyCode == RIGHT) { // If it's the right arrow
+   movimientobola+= speed;
+   direccionDerecha = true;
+   imageIndex=(imageIndex+1) % carabolita1.length;
+   }
+   if (keyCode == LEFT) { // If it's the right arrow
+   movimientobola-= speed;
+   direccionDerecha = false;
+   imageIndex2=(imageIndex2+1) % carabolitaA.length;
+   }
+   }
+   */
 }
-  */
-  }
-  void updateenemigos(){
-cargenemigos();
+void updateenemigos() {
+  cargenemigos();
   carabolita.show();
-  if(!carabolita.dead){
+  if (!carabolita.dead) {
     enemigotime++;
     speed += 0.0017;
-    ellipse(56,56,56,56);
-    if(enemigotime > mintimebetobs + randomadicion){
+    ellipse(56, 56, 56, 56);
+    if (enemigotime > mintimebetobs + randomadicion) {
       addObstacle();
     }
-   moveenemigos();
+    moveenemigos();
     carabolita.update();
-  }
-  else{
+  } else {
     textSize(32);
     fill(0);
     text("YOU DEAD! ", 180, 200);
-    
   }
 }
 
-void cargenemigos(){
-  
-  for(int i = 0; i < enemigos.size(); i++){
+void cargenemigos() {
+
+  for (int i = 0; i < enemigos.size(); i++) {
     enemigos.get(i).carg();
   }
- 
 }
+int cantEnemigos = 5;
+void addObstacle() {
+  if (random(1) < 0.15) {
+  } else {
+    if (enemigos.size() < cantEnemigos)
+      enemigos.add(new enemigo(floor(random(1))));
+  }
 
-void addObstacle(){
-  if(random(1) < 0.15){
-  }
-  else{
-    enemigos.add(new enemigo(floor(random(1))));
-  }
-  
   randomadicion = floor(random(50));
   enemigotime = 0;
 }
 
-void moveenemigos(){
+void moveenemigos() {
 
-  for(int i = 0; i < enemigos.size(); i++){
+  for (int i = 0; i < enemigos.size(); i++) {
     enemigos.get(i).mov(speed);
-    if(enemigos.get(i).posix < -figuraXpos){
+    if (enemigos.get(i).posix < -figuraXpos) {
       enemigos.remove(i);
       i--;
     }
   }
-  
 }
 
-void reset(){
+void reset() {
   carabolita = new figura();
   enemigos = new ArrayList<enemigo>();
-  
+
   enemigotime = 0;
   randomadicion = floor(random(50));
   groundcounter = 0;
   speed = 10;
 }
-  
-  
