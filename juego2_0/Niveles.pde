@@ -33,9 +33,7 @@ class niveles {
       image(img2, posxI, posYI);
       image(imagenc1, 491, 550);
       image(imagenc2, 380, 550);
-      // text(mouseX,100,100);
-      //text(mouseY,100,200);
-      //fill(0);
+     
       if (mouseX>340 && mouseX < 477 && mouseY<510   && mouseY>370) {
         if (mousePressed == true)
         {
@@ -81,7 +79,7 @@ class niveles {
       y17=y17-10;
       y18=y18-10;
       y19=y19-10;
-      //y20=y20-10;
+      
 
       frameRate(6);
       text("Ball Ball", 602, y4);
@@ -180,13 +178,13 @@ class niveles {
       image(imgr, 1160, 15);
       carabolita.show();
       carabolita.mover();
+      carabolita.chocar(enemigos);
     }
 
 
 
     //nivel 1 
     else if (gamestate==0) {
-   carabolita.chocar(enemigos);
       carabola1.jugar();
       image(imgN, posicionfondo, 0);
       imageMode(CORNER);
@@ -217,9 +215,9 @@ class niveles {
 
       carabolita.show();
       carabolita.mover();
-   
       updateenemigos();
-      //carabolita.bandera();
+      carabolita.chocar(enemigos);
+     
     }
     // nivel 2
     else if (gamestate==3) {
@@ -253,7 +251,7 @@ class niveles {
       image(imgr, 1160, 15);
       carabolita.show();
       carabolita.mover();
-      //carabolita.bandera();
+      carabolita.chocar(enemigos);
     }
   }
 }
