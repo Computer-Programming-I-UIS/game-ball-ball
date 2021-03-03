@@ -6,7 +6,7 @@ Cristian Melo Reina
 Jeyson Andres Sanchez Tolosa 
 
 ### Introduccion
-![menu.JPG](https://github.com/Computer-Programming-I-UIS/game-ball-ball/blob/master/juego2_0/data/Diapositiva1.JPG)
+
 
 Lleva la bolita a la victoria sin dejarla que muera.
 
@@ -16,7 +16,8 @@ Lleva la bolita a la victoria sin dejarla que muera.
 
 Para iniciar el juego precione play, luego escoja su nivel y disfrute de la aventura.
 
-
+![menu.JPG](https://github.com/Computer-Programming-I-UIS/game-ball-ball/blob/master/juego2_0/data/Diapositiva1.JPG)
+![aventura](https://github.com/Computer-Programming-I-UIS/game-ball-ball/blob/master/juego2_0/data/Diapositiva2.JPG)
 
 Ya en cada nivel para mover la bolita presione la flecha hacia la derecha e izquierda y para saltar precione la barra espaciadora.
 
