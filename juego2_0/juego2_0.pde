@@ -42,7 +42,7 @@ int enemigotime =0;
 int mintimebetobs= 60;
 int randomadicion =0;
 int groundcounter =0;
-float speed = 3;
+float speed = 6;
 PImage clasificacio1;
 PImage clasificacio2;
 float fondox=0;
@@ -156,7 +156,7 @@ void updateenemigos() {
   carabolita.show();
   if (!carabolita.dead) {
     enemigotime++;
-    speed += 0.0017;
+    speed += 0.00017;
     ellipse(56, 56, 56, 56);
     if (enemigotime > mintimebetobs + randomadicion) {
       addObstacle();
@@ -176,7 +176,8 @@ void cargenemigos() {
     enemigos.get(i).carg();
   }
 }
-int cantEnemigos = 5;
+int cantEnemigos = 1;
+
 void addObstacle() {
   if (random(1) < 0.15) {
   } else {
@@ -185,7 +186,7 @@ void addObstacle() {
   }
 
   randomadicion = floor(random(50));
-  enemigotime = 0;
+  enemigotime = 1;
 }
 
 void moveenemigos() {
@@ -207,4 +208,4 @@ void reset() {
   randomadicion = floor(random(50));
   groundcounter = 0;
   speed = 10;
-}
+} 
