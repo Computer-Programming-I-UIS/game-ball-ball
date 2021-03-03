@@ -45,7 +45,7 @@ class figura {
       println("(x_caja > x && x_caja < x + a) || (x_caja + a_caja > x && x_caja + a_caja < x + a ) = " + str((x_caja > x && x_caja < x + a) || (x_caja + a_caja > x && x_caja + a_caja < x + a )));
       println("gamestate = " + str(gamestate));
       if ( ( (x_caja > x && x_caja < x + a) || (x_caja + a_caja > x && x_caja + a_caja < x + a ) ) && y + h > y_caja ) {
-        
+              speed=0;
           image(imgper, 0, 0);
           
       }
