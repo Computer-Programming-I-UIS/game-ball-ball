@@ -6,7 +6,7 @@ Cristian Melo Reina
 Jeyson Andres Sanchez Tolosa 
 
 ### Introduccion
-![menu.JPG](https://www.dropbox.com/s/zmcblmf4mc75txh/Diapositiva1.JPG?dl=0)
+![menu.JPG](https://github.com/Computer-Programming-I-UIS/game-ball-ball/blob/master/juego2_0/data/Diapositiva1.JPG)
 
 Lleva la bolita a la victoria sin dejarla que muera.
 
