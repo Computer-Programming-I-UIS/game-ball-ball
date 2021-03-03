@@ -2,7 +2,7 @@ class figura {
   //Salto
   float posY = 0;
   float vely = 0;
-  float gravedad = 0.8  ;
+  float gravedad = 0.3  ;
   int size = 20 ;
   boolean salto = false;
   boolean dead = false;
@@ -14,7 +14,7 @@ class figura {
   }
   void jump() {
     if (posY == 0 ) {  
-      gravedad = 0.8;
+      gravedad = 0.4;
       vely= 16;
     }
   }
@@ -45,7 +45,7 @@ class figura {
       println("(x_caja > x && x_caja < x + a) || (x_caja + a_caja > x && x_caja + a_caja < x + a ) = " + str((x_caja > x && x_caja < x + a) || (x_caja + a_caja > x && x_caja + a_caja < x + a )));
       println("gamestate = " + str(gamestate));
       if ( ( (x_caja > x && x_caja < x + a) || (x_caja + a_caja > x && x_caja + a_caja < x + a ) ) && y + h > y_caja ) {
-        speed=0;
+        
           image(imgper, 0, 0);
           
       }
@@ -95,5 +95,6 @@ class figura {
       score += 1;
     }
   }
+
 }
 
