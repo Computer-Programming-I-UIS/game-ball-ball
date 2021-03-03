@@ -135,7 +135,7 @@ void cargenemigos() {
     enemigos.get(i).carg();
   }
 }
-int cantEnemigos = 1;
+int cantEnemigos = 4;
 
 void addObstacle() {
   if (random(1) < 0.15) {
