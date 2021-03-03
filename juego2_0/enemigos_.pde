@@ -19,7 +19,7 @@ class enemigo {
       cabez=90;
       break;
     case 2: 
-      altr=90;
+      altr=80;
       cabez=70;
       break;
     }
