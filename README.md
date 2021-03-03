@@ -20,6 +20,7 @@ Para iniciar el juego precione play, luego escoja su nivel y disfrute de la aven
 ![niveles](https://github.com/Computer-Programming-I-UIS/game-ball-ball/blob/master/juego2_0/data/Diapositiva2.JPG)
 ![juego](https://github.com/Computer-Programming-I-UIS/game-ball-ball/blob/master/juego2_0/data/Diapositiva3.JPG)
 ![juego](https://github.com/Computer-Programming-I-UIS/game-ball-ball/blob/master/juego2_0/data/Diapositiva4.JPG)
+![juego](https://github.com/Computer-Programming-I-UIS/game-ball-ball/blob/master/juego2_0/data/Captura%20depantalla5.png)
 
 
 Ya en cada nivel para mover la bolita presione la flecha hacia la derecha e izquierda y para saltar precione la barra espaciadora.
