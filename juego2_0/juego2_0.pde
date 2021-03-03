@@ -8,7 +8,7 @@ int imageIndex=0;
 int imageIndex2=0;
 boolean direccionDerecha = true;//direccion de la bandera 
 float movimientobola = 50;
-///float speed = 5;
+
 int  y1=500;
 int y2=570;
 int  y3=640;
@@ -28,7 +28,7 @@ int y16=1550;//cancionees
 int  y17=1620;
 int y18=1690;
 int  y19=1800;
-//int y20=1830;
+
 
 
 PImage carabolitaJump;//iamgen para salto 
@@ -56,11 +56,7 @@ enemigo carabol;
 float posY = 0;
 int radius = 40;
 int gamestate=1;// inicializacion del juego pantalla de inico
-//float x1=300,x2=460,x3=460,x22=440,x4=780,x5=1100,x=0;
-//float x6=460,x7=440,x72=460,x8=620,x9=990,x10=1310;
 float y= 490;
-//float speedbolitaDA = 3;
-//float speed2bolitaIA = 3;
 float speed3fondo=4;
 int direction = 1;
 PImage img, img2, imgh, imgr, imgN5;//imagenes inicio y nivles
@@ -84,7 +80,6 @@ void setup() {
   imagenc2 = loadImage("Juego.jpg");
   imagenc1 = loadImage("clasf.png");
   imgN = loadImage("fondo4.jpg");//fondo nivel 1 
-  //  imgN2=loadImage("maxresdefault.png");//fondo inicio
   imgN3=loadImage("niveles.jpg");//fondo niveles
   imgN4=loadImage("nivel2.jpg");
   img = loadImage("fondo1.jpg");
@@ -100,7 +95,6 @@ void setup() {
   sonidomenu = new SoundFile(this, "menu.mp3");
   nivel_1=new SoundFile(this, "nivel1.mp3");
   nivel_2=new SoundFile(this, "nivel2.mp3");
-  // nivel_3=new SoundFile(this, "nivel3.mp3");
   carabola1 =new musica();
 
   //salto de la bolita y animacion 
@@ -108,26 +102,11 @@ void setup() {
   carabolitaJump = loadImage("Captura de pantalla0.png");
   carabola = new niveles(); 
   carabolita = new figura();
-
-  /* for (int i = 0; i < carabolita1.length; i++)
-   {
-   carabolita1[i]=loadImage("Captura de pantalla" + i + ".png");
-   }
-   for(int i2 =0; i2<carabolitaA.length; i2++)
-   {
-   carabolitaA[i2]=loadImage("Captura depantalla" + i2 + ".png");
-   }
-   
-   */
 }
 void draw() {
   carabola.level();
-
-  /*if (direccionDerecha) {
-   image(carabolita1[imageIndex], movimientobola, 430);
-   } else {
-   image(carabolitaA[imageIndex2], movimientobola, 430);
-   }*/
+  text(mouseX, 600, 600);
+  text(mouseY, 600, 400);
 }
 void keyPressed() {
   switch(key) {
@@ -135,21 +114,6 @@ void keyPressed() {
     carabolita.jump(); 
     break;
   }
-  /*
-  if ( key == CODED) {// If it's a coded key}.
-   
-   if (keyCode == RIGHT) { // If it's the right arrow
-   movimientobola+= speed;
-   direccionDerecha = true;
-   imageIndex=(imageIndex+1) % carabolita1.length;
-   }
-   if (keyCode == LEFT) { // If it's the right arrow
-   movimientobola-= speed;
-   direccionDerecha = false;
-   imageIndex2=(imageIndex2+1) % carabolitaA.length;
-   }
-   }
-   */
 }
 void updateenemigos() {
   cargenemigos();
@@ -157,16 +121,11 @@ void updateenemigos() {
   if (!carabolita.dead) {
     enemigotime++;
     speed += 0.00017;
-    ellipse(56, 56, 56, 56);
     if (enemigotime > mintimebetobs + randomadicion) {
       addObstacle();
     }
     moveenemigos();
     carabolita.update();
-  } else {
-    textSize(32);
-    fill(0);
-    text("YOU DEAD! ", 180, 200);
   }
 }
 
@@ -201,11 +160,10 @@ void moveenemigos() {
 }
 
 void reset() {
-  carabolita = new figura();
-  enemigos = new ArrayList<enemigo>();
-
-  enemigotime = 0;
-  randomadicion = floor(random(50));
-  groundcounter = 0;
-  speed = 10;
-} 
+  if (mouseX>415 && mouseX < 555 && mouseY<507   && mouseY>371) {
+    if (mousePressed == true)
+    {
+      gamestate=2;
+    }
+  }
+}
