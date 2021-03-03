@@ -6,7 +6,7 @@ Cristian Melo Reina
 Jeyson Andres Sanchez Tolosa 
 
 ### Introduccion
-
+![bola](https://github.com/Computer-Programming-I-UIS/game-ball-ball/blob/master/juego2_0/data/Captura%20de%20pantalla0.png)
 
 Lleva la bolita a la victoria sin dejarla que muera.
 
@@ -20,7 +20,7 @@ Para iniciar el juego precione play, luego escoja su nivel y disfrute de la aven
 ![niveles](https://github.com/Computer-Programming-I-UIS/game-ball-ball/blob/master/juego2_0/data/Diapositiva2.JPG)
 ![juego](https://github.com/Computer-Programming-I-UIS/game-ball-ball/blob/master/juego2_0/data/Diapositiva3.JPG)
 ![juego](https://github.com/Computer-Programming-I-UIS/game-ball-ball/blob/master/juego2_0/data/Diapositiva4.JPG)
-![juego](https://github.com/Computer-Programming-I-UIS/game-ball-ball/blob/master/juego2_0/data/Captura%20depantalla5.png)
+![juego](https://github.com/Computer-Programming-I-UIS/game-ball-ball/blob/master/juego2_0/data/Diapositiva5.JPG)
 
 
 Ya en cada nivel para mover la bolita presione la flecha hacia la derecha e izquierda y para saltar precione la barra espaciadora.
@@ -34,6 +34,10 @@ Apto para todo el publico
 
 
 ### Creditos
+![creditos](https://github.com/Computer-Programming-I-UIS/game-ball-ball/blob/master/juego2_0/data/Presentaci%C3%B3n1.jpg)
+
+
+
 - Cristian Melo Estudiante ingeniería eléctrica (2190706)
 - Jeyson Sanchez Estudiante ingeniería eléctrica (2192116)
 
