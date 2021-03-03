@@ -8,7 +8,7 @@ Jeyson Andres Sanchez Tolosa
 ### Introduccion
 ![bola](https://github.com/Computer-Programming-I-UIS/game-ball-ball/blob/master/juego2_0/data/Captura%20de%20pantalla0.png)
 
-Lleva la bolita a la victoria sin dejarla que muera.
+Lleva la bolita a una gran avetura sin dejarla morir.
 
 ### Juego
 
