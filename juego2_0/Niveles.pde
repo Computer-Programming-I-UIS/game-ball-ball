@@ -7,7 +7,7 @@ class niveles {
   float speed2bolitaIA = 3;
   float speed3fondo=14;
   float speed2fondo=10;
-  float speed1fondo=6;
+  float speed1fondo=8;
 
   int direction = 1;
   float posicionfondo=0;
