@@ -17,9 +17,14 @@ Lleva la bolita a la victoria sin dejarla que muera.
 Para iniciar el juego precione play, luego escoja su nivel y disfrute de la aventura.
 
 ![menu.JPG](https://github.com/Computer-Programming-I-UIS/game-ball-ball/blob/master/juego2_0/data/Diapositiva1.JPG)
-![aventura](https://github.com/Computer-Programming-I-UIS/game-ball-ball/blob/master/juego2_0/data/Diapositiva2.JPG)
+![niveles](https://github.com/Computer-Programming-I-UIS/game-ball-ball/blob/master/juego2_0/data/Diapositiva2.JPG)
+![juego](https://github.com/Computer-Programming-I-UIS/game-ball-ball/blob/master/juego2_0/data/Diapositiva3.JPG)
+![juego](https://github.com/Computer-Programming-I-UIS/game-ball-ball/blob/master/juego2_0/data/Diapositiva4.JPG)
+
 
 Ya en cada nivel para mover la bolita presione la flecha hacia la derecha e izquierda y para saltar precione la barra espaciadora.
+![juego](https://github.com/Computer-Programming-I-UIS/game-ball-ball/blob/master/juego2_0/data/Diapositiva6.JPG)
+
 
 ### Clasificacion
 ![clasificacion.PNG](https://www.dropbox.com/s/jszp7qo08rpo30p/clasificacion.PNG?dl=0&raw=1)
