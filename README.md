@@ -6,7 +6,7 @@ Cristian Melo Reina
 Jeyson Andres Sanchez Tolosa 
 
 ### Introduccion
-![Diapositiva1.JPG](https://drive.google.com/file/d/1D0e27g_fINvW3P0VJ1B_8h6ZNkQQZRPO/view?usp=sharing)
+![diapositiva1.JPG](https://drive.google.com/file/d/1D0e27g_fINvW3P0VJ1B_8h6ZNkQQZRPO/view?usp=sharing)
 
 Lleva la bolita a la victoria sin dejarla que muera.
 
